@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="ATS Onboarding">
+    <title>ATS Onboarding</title>
+
+    <!-- Required External CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  
+    <!-- DashForge CSS -->
+    <link rel="stylesheet" href="./assets/css/dashforge.css">
+
+    <!-- Page CSS --> 
+    <link rel="stylesheet" href="./assets/css/ats.css">
+  </head>
+  
+  <body>
+   
+    <section class="onboard-body">
+      <div class="container pd-y-30">
+        <div>
+          <div class="row justify-content-between">
+            <div class="col-md-4 mb-3 mb-md-0">
+              <p class="tx-16 tx-semibold mb-0">MANAGER SELF SERVICE</p>
+            </div>
+            <div class="col-md-4 ">
+              <div class="d-flex justify-content-md-end justify-content-between">
+                <div class="d-flex mg-r-20">
+                  <p class="tx-14 mb-0 mg-r-5 pd-t-5">LANGUAGE </p>
+                  <div class="">
+                    <select class="custom-select tx-12 tx-semibold">
+                      <option selected>EN</option>
+                      <option value="1">FR</option>
+                      <option value="2">EN</option>
+                      <option value="3">GR</option>
+                    </select>
+                  </div>
+
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <hr>
+
+        <div class="personal">
+          <div class="row">
+            <div class="col-md-4 mg-b-20 mg-md-0">
+              <p class="tx-bold tx-32 mb-0">Direct Report Validation</p>
+              <p class="tx-18 tx-grey-500 col-lg-10 pd-x-0">By accepting or declining, you are choosing which employees report to you.</p>
+            </div>
+            <div class="col-md-8">
+              <div class="card card-body">
+                <form>
+                  <div class="mg-b-15">
+                    <div class="form-row">
+                      <div class="col-md-8">
+                        <div class="d-flex">
+                          <div class="avatar avatar-xl bd-0"><img src="./assets/img//avatar-xl.jpg" class="rounded-circle bd-0" alt=""></div>
+                          <div class="pd-t-8 mg-l-10">
+                            <p class="tx-18 tx-medium tx-grey-900 mg-b-3">Kunle Olayinka</p>
+                            <p class="tx-subdued">Manager, Business Relations</p>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-md-4">
+                        <div class="row row-sm justify-content-between pd-t-15">
+                          <div class="col-6">
+                            <div class="bd-gender">
+                              <div class="custom-control custom-radio">
+                                <input type="radio" id="accept1" name="customRadio" class="custom-control-input pd-t-4" checked onclick="acceptBtn()">
+                                <label class="custom-control-label tx-grey-700 tx-medium" for="accept1">Accept</label>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="col-6">
+                            <div class="bd-gender">
+                              <div class="custom-control custom-radio">
+                                <input type="radio" id="decline1" name="customRadio" class="custom-control-input"onclick="declineBtn()" >
+                                <label class="custom-control-label tx-grey-700 tx-medium" for="decline1">Decline</label>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class=" mg-t-5" id="declineBox">
+                      <label for="Reason" class="tx-grey-700 mg-b-3 tx-medium">Reason for declining</label>
+                      <textarea name="" id="" class="form-control" rows="4"></textarea>
+                    </div>
+                    <hr>
+                  </div>
+                 
+                  
+                 
+                </form>
+
+              </div>
+            </div>
+          </div>
+        </div>
+         
+        <div class="modal-footer mg-t-20">
+          <button class="btn btn-primary mg-t-20 mg-md-t-30 pd-x-60" data-toggle="modal" data-target="#saveModal">
+            <img src="./assets/img/save.svg" alt="" srcset="">
+            <span class="tx-14 mg-l-5">Save and Continue</span>
+          </button>    
+        </div>
+      
+     
+
+       
+      </div>
+    </section>
+
+
+
+    <script src="./assets/lib/jquery/jquery.min.js"></script>
+    <script src="./assets/lib/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="./assets/lib/feather-icons/feather.min.js"></script>
+    <script src="./assets/lib/perfect-scrollbar/perfect-scrollbar.min.js"></script>
+    <script src="./assets/js/dashforge.js"></script>
+    <script>
+      function acceptBtn(){
+        let x = document.getElementById("declineBox");
+        if (x.style.display === "block") {
+          x.style.display = "none";
+        } 
+      }
+      function declineBtn() {
+        let x = document.getElementById("declineBox");
+        x.style.display = "block"
+      }  
+      
+    </script>
+  </body>
+</html>
